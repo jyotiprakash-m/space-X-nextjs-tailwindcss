@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import TailwindPractice from "../components/TailwindPractice"
 export default function Home() {
   return (
     <div>
@@ -10,7 +9,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <TailwindPractice />
 
     </div>
   )
