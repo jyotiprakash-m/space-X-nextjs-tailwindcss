@@ -54,7 +54,7 @@ function MissionDetails() {
                                         <div className="flex items-center gap-4 pb-2 border-b-2 border-gray-600">
                                             <img className="w-20" src={item.links.mission_patch_small} />
                                             <div>
-                                                <h1 className="text-2xl sm:text-3xl font-bold border-b-2">#{item.flight_number} {item.mission_name}</h1>
+                                                <h1 className="text-2xl sm:text-3xl font-bold">#{item.flight_number} {item.mission_name}</h1>
                                                 <p className="font-semibold">{moment(item.launch_date_local).format('llll')}</p>
                                                 {/* {moment(item.launch_date_local).calendar()} */}
                                             </div>
