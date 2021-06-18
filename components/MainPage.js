@@ -111,10 +111,11 @@ function MainPage() {
                         <div className="w-full sm:w-1/2 md:w-2/3 lg:w-4/5 flex flex-wrap">
 
                             {missions.map((mission) => (
-                                <Link key={mission.flight_number} href={`/mission/${mission.flight_number}`}>
 
-                                    <div className="w-full md:w-1/2 xl:w-1/4 p-3">
-                                        <div className="bg-white w-full rounded-lg p-3">
+
+                                <div className="w-full md:w-1/2 xl:w-1/4 p-3">
+                                    <Link key={mission.flight_number} href={`/mission/${mission.flight_number}`}>
+                                        <div className="bg-white w-full rounded-lg p-3 cursor-pointer hover:bg-gray-100">
                                             <img className="w-full" src={mission.links.mission_patch_small} alt="logo" />
                                             <h1 className="font-bold text-blue-700 my-2">{mission.mission_name} #{mission.flight_number}</h1>
                                             <h1 className="font-bold">Mission Ids:</h1>
@@ -130,8 +131,8 @@ function MainPage() {
                                             <h1 className="font-bold ">Successful Launch:<span className="text-gray-700 font-semibold ml-2">{mission.launch_success ? "True" : "False"}</span></h1>
                                             <h1 className="font-bold ">Successful Land:<span className="text-gray-700 font-semibold ml-2">{mission.rocket.first_stage.cores[0].land_success ? "True" : "False"}</span></h1>
                                         </div>
-                                    </div>
-                                </Link>
+                                    </Link>
+                                </div>
                             ))}
 
 
